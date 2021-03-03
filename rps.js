@@ -40,27 +40,27 @@ const game = () => {
 
     if (answer === answer2) {
       result.textContent = (`${answer} VS ${answer2}. It\'s a Draw`);
-      hands1.setAttribute('src', `/RPS/img/${answer}.png`)
-      hands2.setAttribute('src', `/RPS/img/${answer2}.png`)
+      hands1.setAttribute('src', `/img/${answer}.png`)
+      hands2.setAttribute('src', `/img/${answer2}.png`)
       return;
 
     } else if (answer === 'rock' & answer2 === 'paper') {
       result.textContent = (`${answer} VS ${answer2}. You lose`);
-      hands1.setAttribute('src', `/RPS/img/${answer}.png`)
-      hands2.setAttribute('src', `/RPS/img/${answer2}.png`)
+      hands1.setAttribute('src', `/img/${answer}.png`)
+      hands2.setAttribute('src', `/img/${answer2}.png`)
       count2.textContent = cScore++;
       return;
     } else if (answer === 'scissors' & answer2 === 'rock') {
       result.textContent = (`${answer} VS ${answer2}. You lose!`);
-      hands1.setAttribute('src', `/RPS/img/${answer}.png`)
-      hands2.setAttribute('src', `/RPS/img/${answer2}.png`)
+      hands1.setAttribute('src', `/img/${answer}.png`)
+      hands2.setAttribute('src', `/img/${answer2}.png`)
       count2.textContent = cScore + 1;
       ;
       return;
     } else if (answer === 'paper' & answer2 === 'scissors') {
       result.textContent = (`${answer} VS ${answer2}. You lose`);
-      hands1.setAttribute('src', `/RPS/img/${answer}.png`)
-      hands2.setAttribute('src', `/RPS/img/${answer2}.png`)
+      hands1.setAttribute('src', `/img/${answer}.png`)
+      hands2.setAttribute('src', `/img/${answer2}.png`)
       count2.textContent = cScore++;
       ;
       return;
@@ -68,8 +68,8 @@ const game = () => {
 
     else {
       result.textContent = (`${answer} VS ${answer2}. You win`);
-      hands1.setAttribute('src', `/RPS/img/${answer}.png`)
-      hands2.setAttribute('src', `/RPS/img/${answer2}.png`)
+      hands1.setAttribute('src', `/img/${answer}.png`)
+      hands2.setAttribute('src', `/img/${answer2}.png`)
       count1.textContent = pScore++;
       return;
     }
