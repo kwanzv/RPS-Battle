@@ -1,0 +1,92 @@
+* {
+  margin:0;
+  box-sizing: border-box;
+  padding:0;
+}
+
+.section {
+  height: 100vh;
+  background-color: azure;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.score {
+  color: #333;
+  display: flex;
+  height: 30vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.score h2 {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.intro {
+  color: #333;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.intro h1 {
+  font-size: 4rem;
+}
+
+.intro button,
+.match button{
+  height: 4rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  color: #333;
+  background: rgb(45,117,96);
+}
+
+.match {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+
+.hands,
+.options
+ {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hands img{
+  margin:auto;
+  padding-bottom: 50px;
+  width: 50%;
+  padding-right: 50px;
+}
+
+.computer-hand {
+  transform: rotateY(180deg);
+}
+
+.winner {
+  color: #333;
+  text-align: center;
+  font-size: 50px;
+}
+
+div.disappear {
+  opacity:0;
+  pointer-events: none;
+}
+
+div.appear {
+  opacity: 1;
+  pointer-events: all;
+}
