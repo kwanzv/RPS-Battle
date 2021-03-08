@@ -4,6 +4,16 @@
   padding:0;
 }
 
+.parallax {
+  background-image:url("/img/undraw_game_day_ucx9.svg");
+  height: 750px;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 50%;
+}
+
 .section {
   height: 100vh;
   background-color: azure;
@@ -42,15 +52,27 @@
   height: 4rem;
   width: 10rem;
   font-size: 1.5rem;
+  font-weight:300;
   cursor: pointer;
   border: none;
-  color: #333;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  color: rgb(255, 255, 255);
   background: rgb(45,117,96);
 }
 
+.match button:hover {
+  background: rgb(54, 139, 114);
+  color: #eee;
+  transform:scale(1.1);
+}
+
 .match {
+  max-width: 40%;
   position: absolute;
-  top:50%;
+  top:30%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.5s ease 0.5s;
