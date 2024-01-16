@@ -11,53 +11,33 @@
 
   <body>
     <section class="game">
-      <div class="intro">
-        <div class="heading-wrapper">
-          <img src="img/logo.svg" alt="" />
-          <div class="score-wrapper">
-            <p>Score</p>
-            <span class="score">12</span>
-          </div>
+      <div class="heading-wrapper">
+        <img src="img/logo.svg" alt="" />
+        <div class="score-wrapper">
+          <span class="player-score">Player score</p>
+            <span class="score">0</span>
         </div>
-
-        <div class="selection">
-          <div class="selection-weapon">
-            <img src="img/icon-rock.svg" alt="" />
-          </div>
-          <div class="selection-weapon">
-            <img src="img/icon-paper.svg" alt="" />
-          </div>
-          <div class="selection-weapon">
-            <img src="img/icon-scissors.svg" alt="" />
-          </div>
+        <div class="score-wrapper">
+          <span class="ai-score">AI score</p>
+          <span class="score">0</span>
         </div>
       </div>
 
-      <!-- <div class="match disappear">
-        <div class="score">
-          <div class="p-score">
-            <h2>Player</h2>
-            <span>0</span>
-          </div>
-          <div class="c-score">
-            <h2>Computer</h2>
-            <span>0</span>
-          </div>
-        </div> -->
+      <div class="selection">
+        <div class="selection-weapon" data-id="rock">
+          <img src="img/icon-rock.svg" alt="" />
+        </div>
+        <div class="selection-weapon" data-id="paper">
+          <img src="img/icon-paper.svg" alt="" />
+        </div>
+        <div class="selection-weapon" data-id="scissors">
+          <img src="img/icon-scissors.svg" alt="" />
+        </div>
+      </div>
 
-        <!-- <div class="start-round">
-          <div class="wrapper"><h2 class="winner">Choose an option</h2></div>
-          <div class="hands">
-            <img class="player-hand" src="/img/hand.png" />
-            <img class="computer-hand" src="/img/hand.png" />
-          </div>
-
-          <div class="options">
-            <button class="Rock">Rock</button>
-            <button class="Paper">Paper</button>
-            <button class="Scissors">Scissors</button>
-          </div>
-        </div> -->
+      <div class="results">
+        <h3>Result</h3>
+        <p class="result"></p>
       </div>
     </section>
   </body>

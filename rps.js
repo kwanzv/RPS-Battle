@@ -2,24 +2,12 @@ const game = () => {
   let pScore = 1;
   let cScore = 1;
 
-  //Begin the game
-  const beginGame = () => {
-    const playBtn = document.querySelector(".intro button");
-    const introScreen = document.querySelector(".intro");
-    const match = document.querySelector(".match");
-
-    playBtn.addEventListener("click", () => {
-      introScreen.classList.add("disappear");
-      match.classList.remove("disappear");
-    });
-  };
-
   //Computer play
 
   function computerPlay() {
     // Store the RPS values into options
 
-    const options = ["Rock", "Paper", "Scissors"];
+    const options = ["rock", "paper", "scissors"];
 
     // Generate a random number
     const attack = Math.floor(Math.random(options) * options.length);
@@ -32,39 +20,39 @@ const game = () => {
 
   //Compare the match up
   function pVSc(answer, answer2) {
-    const hands1 = document.querySelector(".player-hand");
-    const hands2 = document.querySelector(".computer-hand");
-    const result = document.querySelector(".winner");
-    const count1 = document.querySelector(".p-score span");
-    const count2 = document.querySelector(".c-score span");
+    const result = document.querySelector(".result");
+    const count1 = document.querySelector(".player-score");
+    const count2 = document.querySelector(".ai-score");
+
+    // switch ((answer, answer2)) {
+    //   case answer === answer2:
+    //     result.textContent = `${answer} VS ${answer2}. It\'s a Draw`;
+    //     // code block
+    //     break;
+    //   case y:
+    //     // code block
+    //     break;
+    //   default:
+    //   // code block
+    // }
 
     if (answer === answer2) {
       result.textContent = `${answer} VS ${answer2}. It\'s a Draw`;
-      hands1.setAttribute("src", `/img/${answer}.png`);
-      hands2.setAttribute("src", `/img/${answer2}.png`);
       return;
     } else if ((answer === "rock") & (answer2 === "paper")) {
       result.textContent = `${answer} VS ${answer2}. You lose`;
-      hands1.setAttribute("src", `/img/${answer}.png`);
-      hands2.setAttribute("src", `/img/${answer2}.png`);
       count2.textContent = cScore++;
       return;
     } else if ((answer === "scissors") & (answer2 === "rock")) {
       result.textContent = `${answer} VS ${answer2}. You lose!`;
-      hands1.setAttribute("src", `/img/${answer}.png`);
-      hands2.setAttribute("src", `/img/${answer2}.png`);
       count2.textContent = cScore + 1;
       return;
     } else if ((answer === "paper") & (answer2 === "scissors")) {
       result.textContent = `${answer} VS ${answer2}. You lose`;
-      hands1.setAttribute("src", `/img/${answer}.png`);
-      hands2.setAttribute("src", `/img/${answer2}.png`);
       count2.textContent = cScore++;
       return;
     } else {
       result.textContent = `${answer} VS ${answer2}. You win`;
-      hands1.setAttribute("src", `/img/${answer}.png`);
-      hands2.setAttribute("src", `/img/${answer2}.png`);
       count1.textContent = pScore++;
       return;
     }
@@ -80,16 +68,16 @@ const game = () => {
 
   //Play the match
   function play() {
-    const choices = document.querySelectorAll(".options  button");
+    const choices = document.querySelectorAll(".selection-weapon");
+
     choices.forEach((choice) => {
       choice.addEventListener("click", function () {
-        pVSc(this.textContent, computerPlay());
+        pVSc(this.dataset.id, computerPlay());
         gameLimit(pScore, cScore);
       });
     });
   }
 
-  beginGame();
   play();
 };
 
