@@ -18,41 +18,42 @@ const game = () => {
     return computerChoice;
   }
 
+  const selection = (document.querySelector(".selection").style.display =
+    "flex");
+
   //Compare the match up
   function pVSc(answer, answer2) {
     const result = document.querySelector(".result");
-    const count1 = document.querySelector(".player-score");
-    const count2 = document.querySelector(".ai-score");
-
-    // switch ((answer, answer2)) {
-    //   case answer === answer2:
-    //     result.textContent = `${answer} VS ${answer2}. It\'s a Draw`;
-    //     // code block
-    //     break;
-    //   case y:
-    //     // code block
-    //     break;
-    //   default:
-    //   // code block
-    // }
+    const count1 = document.querySelector(".player-score>span");
+    const count2 = document.querySelector(".ai-score>span");
 
     if (answer === answer2) {
-      result.textContent = `${answer} VS ${answer2}. It\'s a Draw`;
+      result.textContent = `${answer[0].toUpperCase()}${answer.substring(
+        1
+      )} VS ${answer2[0].toUpperCase()}${answer2.substring(1)} It\'s a Draw`;
       return;
     } else if ((answer === "rock") & (answer2 === "paper")) {
-      result.textContent = `${answer} VS ${answer2}. You lose`;
+      result.textContent = `${answer[0].toUpperCase()}${answer.substring(
+        1
+      )} VS ${answer2[0].toUpperCase()}${answer2.substring(1)}. You lose`;
       count2.textContent = cScore++;
       return;
     } else if ((answer === "scissors") & (answer2 === "rock")) {
-      result.textContent = `${answer} VS ${answer2}. You lose!`;
+      result.textContent = `${answer[0].toUpperCase()}${answer.substring(
+        1
+      )} VS ${answer2[0].toUpperCase()}${answer2.substring(1)}. You lose`;
       count2.textContent = cScore + 1;
       return;
     } else if ((answer === "paper") & (answer2 === "scissors")) {
-      result.textContent = `${answer} VS ${answer2}. You lose`;
+      result.textContent = `${answer[0].toUpperCase()}${answer.substring(
+        1
+      )} VS ${answer2[0].toUpperCase()}${answer2.substring(1)}. You lose`;
       count2.textContent = cScore++;
       return;
     } else {
-      result.textContent = `${answer} VS ${answer2}. You win`;
+      result.textContent = `${answer[0].toUpperCase()}${answer.substring(
+        1
+      )} VS ${answer2[0].toUpperCase()}${answer2.substring(1)}. You win`;
       count1.textContent = pScore++;
       return;
     }
@@ -83,4 +84,8 @@ const game = () => {
 
 //Start the game
 
-game();
+const startBtn = document
+  .querySelector(".start-game")
+  .addEventListener("click", () => {
+    game();
+  });

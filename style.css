@@ -74,6 +74,15 @@ body {
   grid-column-end: 3;
 }
 
+.start-game {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
 
 .match-scores {
   display: flex;
