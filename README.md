@@ -17,7 +17,7 @@
 
 ### Screenshot
 
-![](C:\Users\kwanz\Documents\Projects\url-shortening-api-master\screenshot.jpg)
+![]([C:\Users\kwanz\Documents\Projects\url-shortening-api-master\screenshot.jpg](https://ibb.co/z8gg0ww))
 
 
 
