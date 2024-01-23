@@ -14,7 +14,6 @@
 
 
 
-
 ### Screenshot
 
 ![RPS]("https://i.ibb.co/cb997dd/Screenshot-1.jpg")
@@ -22,44 +21,44 @@
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here]([https://your-live-site-url.com](https://kwanzv.github.io/RPS-Battle/))
 
 ## My process
+
+
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Javascript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I believe I was able to implement the basic game logic quite well in the play function, by getting the 3 choices of rock,paper,scissors and then adding an event listener to all the choices, in turn, calling the callback function of playerVScomputer, which takes in the user's choice and calls computerPlay. 
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+The smart use of creating a player object and using the click event.id for the game logic made it easy to calculate a winner.
 
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
+  function play() {
+    const choices = document.querySelectorAll(".selection-weapon");
+
+    choices.forEach((choice) => {
+      choice.addEventListener("click", function () {
+        pVSc(this.dataset.id, computerPlay());
+        gameLimit(pScore, cScore);
+      });
+    });
+  }
+
+  play();
+};
+
+
+
 ```
 
 ### Continued development
@@ -68,14 +67,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 1]([https://www.example.com](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH/hub)) - I originally made a very basic RPS game but after seeing the design on frontendmentor, I wanted to test my CSS skills and I also  refactor my code to use classes and objects, 
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
