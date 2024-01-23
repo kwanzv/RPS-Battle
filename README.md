@@ -63,7 +63,9 @@ The smart use of creating a player object and using the click event.id for the g
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I am not certain what else I could add to this project due to the nature of the game. 
+
+The only improvements I can think of is adding animations when selecting rock,paper or scissors and having a celebratory screen when you win, or vice versa when you lose.
 
 ### Useful resources
 
