@@ -17,8 +17,7 @@
 
 ### Screenshot
 
-https://ibb.co/z8gg0ww
-![https://ibb.co/z8gg0ww]
+![RPS](https://ibb.co/z8gg0ww)
 
 
 ### Links
